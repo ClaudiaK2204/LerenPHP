@@ -37,10 +37,8 @@ $CURL_REQUIRED = 'Vul krul in ';
 $COLOR_REQUIRED = 'vul kleur in';
 $LENGTH_REQUIRED = 'vul lengte in';
 
-
-
 if (isset($_POST['submit'])){
-    $name = filter_input(INPUT_POST, 'pastavormNaam');
+    $name = filter_input(INPUT_POST, 'pastavormNaam', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 }
 
 //if(isset($_POST['submit']) && !empty($_POST['pastavorm']) && !empty($_POST['pastasaus'])){
